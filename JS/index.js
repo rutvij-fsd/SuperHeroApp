@@ -21,7 +21,7 @@ async function searchHeros(textSearched) {
           return;
      }
 
-     await fetch(`http://gateway.marvel.com/v1/public/characters?nameStartsWith=${textSearched}&ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash}`)
+     await fetch(`https://gateway.marvel.com/v1/public/characters?nameStartsWith=${textSearched}&ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash}`)
           .then(res => res.json())
           .then(data => showSearchedResults(data.data.results))
 }
