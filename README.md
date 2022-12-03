@@ -23,8 +23,8 @@ Favourite Page Here you will be able to see all the characters and details which
 ## Screenshots
 
 ![App Screenshot](https://www.linkpicture.com/q/1_97.jpg)
-![App Screenshot](./ScreenShots/2.png)
-![App Screenshot](./ScreenShots/3.png)
-![App Screenshot](./ScreenShots/4.png)
-![App Screenshot](./ScreenShots/5.png)
+![App Screenshot](https://www.linkpicture.com/q/2_36.png)
+![App Screenshot](https://www.linkpicture.com/q/3_33.png)
+![App Screenshot](https://www.linkpicture.com/q/4_29.png)
+![App Screenshot](https://www.linkpicture.com/q/5_11.png)
 
