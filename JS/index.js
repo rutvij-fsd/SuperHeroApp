@@ -51,9 +51,43 @@ function showSearchedResults(searchedHero) {
                          <div class="flex-col buttons">
                               <button class="btn add-to-fav-btn"><i class="fa-solid fa-heart fav-icon"></i> &nbsp; Add to Favourites</button>
                          </div>
+                         <div style="display:none;">
+                         <span>${hero.name}</span>
+                         <span>${hero.description}</span>
+                         <span>${hero.comics.available}</span>
+                         <span>${hero.series.available}</span>
+                         <span>${hero.stories.available}</span>
+                         <span>${hero.thumbnail.path+'/portrait_uncanny.' + hero.thumbnail.extension}</span>
+                         <span>${hero.id}</span>
+                         <span>${hero.thumbnail.path+'/landscape_incredible.' + hero.thumbnail.extension}</span>
+                         </div>
                     </li>
                `
           }
           count++;
      }
+     events();
+}
+
+function events() {
+     
+     let characterInfo = document.querySelectorAll(".character-info");
+     characterInfo.forEach((character) => character.addEventListener("click", addInfoInLocalStorage))
+}
+
+function addInfoInLocalStorage() {
+     
+     
+     let heroInfo = {
+          name: this.parentElement.parentElement.parentElement.children[2].children[0].innerHTML,
+          description: this.parentElement.parentElement.parentElement.children[2].children[1].innerHTML,
+          comics: this.parentElement.parentElement.parentElement.children[2].children[2].innerHTML,
+          series: this.parentElement.parentElement.parentElement.children[2].children[3].innerHTML,
+          stories: this.parentElement.parentElement.parentElement.children[2].children[4].innerHTML,
+          portraitImage: this.parentElement.parentElement.parentElement.children[2].children[5].innerHTML,
+          id: this.parentElement.parentElement.parentElement.children[2].children[6].innerHTML,
+          landscapeImage: this.parentElement.parentElement.parentElement.children[2].children[7].innerHTML
+     }
+
+     localStorage.setItem("heroInfo", JSON.stringify(heroInfo));
 }
