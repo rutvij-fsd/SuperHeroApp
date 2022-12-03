@@ -1,0 +1,39 @@
+body{
+    overflow-x: hidden;
+}
+
+.favourite-characters{
+    height: 100%;
+}
+
+.cards-container{
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.character-info .btn{ 
+    width: 100%;
+}
+
+.card{
+    height: 484px;
+    width: 250px;
+    margin: 40px 25px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    gap: 5px;
+    backdrop-filter: blur(3px);
+}
+
+.remove-btn{
+    border-radius: 0 0 10px 10px;
+}
+
+.card img{
+    border-radius: 10px 10px 0 0;
+}
+.name{
+    font-size: 20px;
+    /* font-weight: bold; */
+}
