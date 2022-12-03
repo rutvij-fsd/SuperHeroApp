@@ -92,7 +92,7 @@ body {
 
 /*---------------------------------------------------- Search Bar and Results---------------------------------------- */
 .searchBar-items {
-  width: 40%;
+  min-width: 40%;
 }
 
 #search-bar {
@@ -126,17 +126,28 @@ input::placeholder {
   border: 1px solid black;
 }
 
-.search-results {
+#search-results {
+  min-width: 435px;
   list-style: none;
   z-index: 2;
   backdrop-filter: blur(4px);
 }
 
-.search-results li {
+#search-results li {
   background: rgba(56, 56, 56, 0.6);
   height: 100px;
   color: white;
   width: 100%;
+}
+
+#search-results li .hero-name{
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+}
+
+#search-results li:hover .hero-name{
+  color: red;
 }
 
 .single-search-result {
@@ -148,9 +159,13 @@ input::placeholder {
   width: inherit;
 }
 
+.character-info {
+  text-decoration: none;
+  color: white;
+}
+
 .hero-info {
-  /* height: 100%; */
-  /* text-overflow: ellipsis; */
+  
   display: flex;
   align-items: center;
 }
